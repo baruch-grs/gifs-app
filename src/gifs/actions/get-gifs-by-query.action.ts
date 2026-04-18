@@ -19,7 +19,7 @@ export const getGifsByQuery = async (query: string): Promise<Gif[]> => {
     return response.data.data.map((gif) => ({
         id: gif.id,
         title: gif.title,
-        url: gif.url,
+        url: gif.images.original.url,
         width: Number(gif.images.original.width),
         height: Number(gif.images.original.height),
     }));
